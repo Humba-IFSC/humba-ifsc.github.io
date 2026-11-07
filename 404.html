@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando para o Portal Ensino IFSC...</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            if (path.indexOf('/ensino-ifsc') === 0) {
+                var subPath = path.substring('/ensino-ifsc'.length) || '/';
+                window.location.replace('https://ensino-ifsc.hloliveira.workers.dev' + subPath + window.location.search + window.location.hash);
+            } else if (path.indexOf('/enem-sc') === 0) {
+                window.location.replace('https://ensino-ifsc.hloliveira.workers.dev' + path + window.location.search + window.location.hash);
+            } else {
+                window.location.replace('https://humba-ifsc.github.io/');
+            }
+        })();
+    </script>
+</head>
+<body style="background:#0a0e17;color:#f0f4f8;font-family:sans-serif;text-align:center;padding-top:20vh;">
+    <p>Redirecionando para <a href="https://ensino-ifsc.hloliveira.workers.dev/" style="color:#00a94f;">ensino-ifsc.hloliveira.workers.dev</a>...</p>
+</body>
+</html>
